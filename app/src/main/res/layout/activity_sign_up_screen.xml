@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/signUpScreen">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -59,10 +60,10 @@
         app:layout_constraintVertical_bias="0.772" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/createAccBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account"
+        android:text="@string/create_account"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
