@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjectSSPAndroid</string>
+    <string name="app_name">Rock, paper, scissors</string>
     <string name="login">LOGIN</string>
     <string name="username">Username</string>
     <string name="sign_up">Sign up</string>
