@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        splashButton = (Button) findViewById(R.id.splashButton);
+        splashButton = findViewById(R.id.splashButton);
 
 
         splashButton.setOnClickListener(new View.OnClickListener(){

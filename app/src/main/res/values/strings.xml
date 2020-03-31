@@ -11,4 +11,11 @@
     <string name="new_game">NEW GAME</string>
     <string name="recent_games">RECENT GAMES</string>
     <string name="create_account">Create Account</string>
+    <string name="back_button">Back Button</string>
+    <string name="password">Password</string>
+    <string name="choose_gamemode">CHOOSE GAMEMODE</string>
+    <string name="versus">Versus</string>
+    <string name="play">Play</string>
+    <string name="cpu">CPU</string>
+    <string name="todo">TODO</string>
 </resources>
