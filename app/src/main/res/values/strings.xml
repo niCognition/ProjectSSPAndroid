@@ -18,4 +18,5 @@
     <string name="play">Play</string>
     <string name="cpu">CPU</string>
     <string name="todo">TODO</string>
+    <string name="pick_move">PICK YOUR MOVE</string>
 </resources>

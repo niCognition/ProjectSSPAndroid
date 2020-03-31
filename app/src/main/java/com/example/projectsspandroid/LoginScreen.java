@@ -16,8 +16,8 @@ public class LoginScreen extends Activity {
         super.onCreate(SavedInstance);
         setContentView(R.layout.activity_login_screen);
 
-        signUpBtn = (Button) findViewById(R.id.sign_up_btn);
-        logInBtn = (Button) findViewById(R.id.logIn_btn);
+        signUpBtn = findViewById(R.id.sign_up_btn);
+        logInBtn = findViewById(R.id.logIn_btn);
 
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
