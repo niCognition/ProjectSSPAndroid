@@ -4,29 +4,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button splashButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        splashButton = findViewById(R.id.splashButton);
-
-
-        splashButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                startActivity(new Intent(MainActivity.this, LoginScreen.class));
-            }
-        });
+        background.start();
 
     }
+
+
+    Thread background = new Thread() {
+        public void run() {
+            try {
+                sleep(3000);
+
+                Intent i = new Intent(getBaseContext(), LoginScreen.class);
+                startActivity(i);
+
+                finish();
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+    };
 
 
 }
