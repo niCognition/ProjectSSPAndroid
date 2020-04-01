@@ -24,4 +24,6 @@
     <string name="cpuView">Cpu View</string>
     <string name="playerLabel">PLAYER</string>
     <string name="cpuLabel">CPU</string>
+    <string name="randomChoice" >Random Choice</string>
+    <string name="randomChoiceBtn" >Random Choice Button</string>
 </resources>

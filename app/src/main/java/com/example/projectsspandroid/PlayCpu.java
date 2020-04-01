@@ -14,14 +14,14 @@ public class PlayCpu extends Activity {
     ImageView imageViewCpu, imageViewPlayer;
 
     String playerChoice,
-            cpuChoice,
-            result;
+           cpuChoice,
+           result;
 
     TextView displayWinner;
 
     Button rock,
-            paper,
-            scissor;
+           paper,
+           scissor;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,13 +95,9 @@ public class PlayCpu extends Activity {
             cpuChoice = "paper";
             imageViewCpu.setImageResource(R.drawable.paper);
 
-
-
         } else if (n == 2) {
             cpuChoice = "scissors";
             imageViewCpu.setImageResource(R.drawable.scissors);
-
-
 
         }
 

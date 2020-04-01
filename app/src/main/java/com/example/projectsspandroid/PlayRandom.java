@@ -4,15 +4,15 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
 
 import java.util.Random;
 
 public class PlayRandom extends Activity {
 
-    Random random = new Random();
-    int i = random.nextInt(4 - 1) + 4;
-
     Button randomBtn;
+    ImageButton randomChoiceBtn;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,18 +20,60 @@ public class PlayRandom extends Activity {
 
         randomBtn = findViewById(R.id.playRandomBtn);
 
-        randomBtn.setOnClickListener(new View.OnClickListener(){
+        randomChoiceBtn = findViewById(R.id.randomChoiceBtn);
+
+
+        randomBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
+                randomBtn.setVisibility(View.GONE);
+                setRandomImage();
             }
         });
+    }
 
+    public void setRandomImage() {
 
+        Random rand = new Random();
+        int n = rand.nextInt(4);
 
+        if (n == 1) {
+            randomChoiceBtn.setImageResource(R.drawable.rock);
+            randomChoiceBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    setRandomImage();
+                }
+            });
 
+        } else if (n == 2) {
+            randomChoiceBtn.setImageResource(R.drawable.paper);
+            randomChoiceBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    setRandomImage();
+                }
+            });
 
+        } else if (n == 3) {
+            randomChoiceBtn.setImageResource(R.drawable.scissors);
+            randomChoiceBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    setRandomImage();
+                }
+            });
+
+        } else {
+            randomChoiceBtn.setImageResource(R.drawable.rock);
+            randomChoiceBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    setRandomImage();
+                }
+            });
+        }
     }
 
 }
