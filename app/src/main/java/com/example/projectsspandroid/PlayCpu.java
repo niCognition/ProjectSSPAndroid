@@ -4,75 +4,105 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Random;
 
 public class PlayCpu extends Activity {
 
-    String playerChoice,
-           cpuChoice,
-           result;
+    ImageView imageViewCpu, imageViewPlayer;
 
-    Random random;
+    String playerChoice,
+            cpuChoice,
+            result;
+
+    TextView displayWinner;
 
     Button rock,
-           paper,
-           scissor;
+            paper,
+            scissor;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_cpu);
 
-        //Buttons
-        rock = findViewById(R.id.rockBtn);
-        paper = findViewById(R.id.paperBtn);
-        scissor = findViewById(R.id.scissorBtn);
+        try {
 
-        rock.setOnClickListener(new View.OnClickListener() {
+            //Buttons
+            rock = findViewById(R.id.rockBtn);
+            paper = findViewById(R.id.paperBtn);
+            scissor = findViewById(R.id.scissorBtn);
 
-            @Override
-            public void onClick(View v) {
+            //ImageViews
+            imageViewPlayer = findViewById(R.id.playerView);
+            imageViewCpu = findViewById(R.id.cpuView);
 
-                playerChoice = "rock";
-                calculateWinner();
+            //TextView
+            displayWinner = findViewById(R.id.winnerText);
 
-            }
-        });
 
-        paper.setOnClickListener(new View.OnClickListener() {
+            rock.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                playerChoice = "paper";
-                calculateWinner();
+                @Override
+                public void onClick(View v) {
+                    playerChoice = "rock";
+                    imageViewPlayer.setImageResource(R.drawable.rock);
+                    calculateWinner();
 
-            }
-        });
+                }
+            });
 
-        scissor.setOnClickListener(new View.OnClickListener() {
+            paper.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                playerChoice = "scissors";
-                calculateWinner();
+                @Override
+                public void onClick(View v) {
+                    playerChoice = "paper";
+                    imageViewPlayer.setImageResource(R.drawable.paper);
+                    calculateWinner();
 
-            }
-        });
+                }
+            });
+
+            scissor.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    playerChoice = "scissors";
+                    imageViewPlayer.setImageResource(R.drawable.scissors);
+                    calculateWinner();
+
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
     }
 
     public void calculateWinner() {
-        int cpu = random.nextInt(3);
 
-        if (cpu == 0) {
+        Random rand = new Random();
+        int n = rand.nextInt(4);
+
+        if (n == 0) {
             cpuChoice = "rock";
-        } else if (cpu == 1) {
+            imageViewCpu.setImageResource(R.drawable.rock);
+
+        } else if (n == 1) {
             cpuChoice = "paper";
-        } else if (cpu == 2) {
+            imageViewCpu.setImageResource(R.drawable.paper);
+
+
+
+        } else if (n == 2) {
             cpuChoice = "scissors";
+            imageViewCpu.setImageResource(R.drawable.scissors);
+
+
+
         }
 
         if (playerChoice.equals("rock") && cpuChoice.equals("paper")) {
@@ -103,7 +133,7 @@ public class PlayCpu extends Activity {
             result = "Its a TIE!";
         }
 
-        Toast.makeText(PlayCpu.this, result, Toast.LENGTH_SHORT).show();
+        displayWinner.setText(result);
 
     }
 }

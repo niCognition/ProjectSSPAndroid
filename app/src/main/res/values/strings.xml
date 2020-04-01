@@ -19,4 +19,9 @@
     <string name="cpu">CPU</string>
     <string name="todo">TODO</string>
     <string name="pick_move">PICK YOUR MOVE</string>
+    <string name="vsText">VS</string>
+    <string name="playersView">Players View</string>
+    <string name="cpuView">Cpu View</string>
+    <string name="playerLabel">PLAYER</string>
+    <string name="cpuLabel">CPU</string>
 </resources>
