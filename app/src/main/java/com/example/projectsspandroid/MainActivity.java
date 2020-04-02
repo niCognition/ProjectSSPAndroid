@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Thread background = new Thread() {
         public void run() {
             try {
-                sleep(3000);
+                sleep(2000);
 
                 Intent i = new Intent(getBaseContext(), MainMenu.class);
                 startActivity(i);

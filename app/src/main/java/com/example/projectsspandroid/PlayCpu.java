@@ -78,17 +78,17 @@ public class PlayCpu extends Activity {
     public void calculateWinner() {
 
         Random rand = new Random();
-        int n = rand.nextInt(4);
+        int n = rand.nextInt(3) + 1;
 
-        if (n == 0) {
+        if (n == 1) {
             cpuChoice = "rock";
             imageViewCpu.setImageResource(R.drawable.rock);
 
-        } else if (n == 1) {
+        } else if (n == 2) {
             cpuChoice = "paper";
             imageViewCpu.setImageResource(R.drawable.paper);
 
-        } else if (n == 2) {
+        } else if (n == 3) {
             cpuChoice = "scissors";
             imageViewCpu.setImageResource(R.drawable.scissors);
 
