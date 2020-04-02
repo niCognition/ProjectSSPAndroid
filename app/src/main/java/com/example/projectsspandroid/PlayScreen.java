@@ -9,23 +9,18 @@ import android.widget.Button;
 
 public class PlayScreen extends AppCompatActivity {
 
-    Button versusBtn,
-            cpuBtn,
-            playBtn;
+    Button cpuBtn,
+           playBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_screen2);
 
-
-        //Buttons
-        versusBtn = findViewById(R.id.VersusBtn);
         cpuBtn = findViewById(R.id.CpuBtn);
         playBtn = findViewById(R.id.PlayBtn);
 
-
-        cpuBtn.setOnClickListener(new View.OnClickListener(){
+        cpuBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -39,8 +34,6 @@ public class PlayScreen extends AppCompatActivity {
                 startActivity(new Intent(PlayScreen.this, PlayRandom.class));
             }
         });
-
-
 
     }
 }

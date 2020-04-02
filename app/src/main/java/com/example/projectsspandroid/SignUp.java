@@ -8,9 +8,7 @@ import android.widget.Button;
 
 public class SignUp extends Activity {
 
-
     Button backButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -29,6 +27,5 @@ public class SignUp extends Activity {
         });
 
     }
-
 
 }

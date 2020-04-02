@@ -11,7 +11,8 @@ import java.util.Random;
 
 public class PlayCpu extends Activity {
 
-    ImageView imageViewCpu, imageViewPlayer;
+    ImageView imageViewCpu,
+              imageViewPlayer;
 
     String playerChoice,
            cpuChoice,
@@ -23,23 +24,19 @@ public class PlayCpu extends Activity {
            paper,
            scissor;
 
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_cpu);
 
         try {
 
-            //Buttons
             rock = findViewById(R.id.rockBtn);
             paper = findViewById(R.id.paperBtn);
             scissor = findViewById(R.id.scissorBtn);
 
-            //ImageViews
             imageViewPlayer = findViewById(R.id.playerView);
             imageViewCpu = findViewById(R.id.cpuView);
 
-            //TextView
             displayWinner = findViewById(R.id.winnerText);
 
 
@@ -50,7 +47,6 @@ public class PlayCpu extends Activity {
                     playerChoice = "rock";
                     imageViewPlayer.setImageResource(R.drawable.rock);
                     calculateWinner();
-
                 }
             });
 
@@ -61,7 +57,6 @@ public class PlayCpu extends Activity {
                     playerChoice = "paper";
                     imageViewPlayer.setImageResource(R.drawable.paper);
                     calculateWinner();
-
                 }
             });
 
@@ -72,13 +67,11 @@ public class PlayCpu extends Activity {
                     playerChoice = "scissors";
                     imageViewPlayer.setImageResource(R.drawable.scissors);
                     calculateWinner();
-
                 }
             });
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
     }
 
@@ -128,8 +121,6 @@ public class PlayCpu extends Activity {
         if (playerChoice.equals("scissors") && cpuChoice.equals("scissors")) {
             result = "Its a TIE!";
         }
-
         displayWinner.setText(result);
-
     }
 }

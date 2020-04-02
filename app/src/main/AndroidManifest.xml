@@ -13,13 +13,11 @@
         <activity
             android:name=".PlayRandom"
             android:parentActivityName=".PlayScreen">
-
         </activity>
 
         <activity
             android:name=".PlayCpu"
             android:parentActivityName=".PlayScreen">
-
         </activity>
 
         <activity

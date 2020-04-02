@@ -9,7 +9,7 @@ import android.widget.Button;
 public class LoginScreen extends Activity {
 
     Button signUpBtn,
-            logInBtn;
+           logInBtn;
 
     @Override
     public void onCreate(Bundle SavedInstance) {

@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     Thread background = new Thread() {
         public void run() {
             try {
@@ -33,6 +32,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     };
-
 
 }

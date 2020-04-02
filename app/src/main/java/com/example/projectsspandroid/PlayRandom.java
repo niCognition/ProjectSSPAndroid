@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-
 import java.util.Random;
 
 public class PlayRandom extends Activity {
@@ -21,7 +20,6 @@ public class PlayRandom extends Activity {
         randomBtn = findViewById(R.id.playRandomBtn);
 
         randomChoiceBtn = findViewById(R.id.randomChoiceBtn);
-
 
         randomBtn.setOnClickListener(new View.OnClickListener() {
 
