@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 sleep(3000);
 
-                Intent i = new Intent(getBaseContext(), LoginScreen.class);
+                Intent i = new Intent(getBaseContext(), MainMenu.class);
                 startActivity(i);
 
                 finish();
