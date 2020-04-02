@@ -6,6 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * The main menu contains two buttons. Help and New Game button.
+ * When clicking on helpBtn, the view changes to the help menu.
+ * When clicking on newGameBtn, the view changes to the PlayScreen.
+ */
+
 public class MainMenu extends Activity {
 
     Button newGameBtn,
@@ -19,6 +25,9 @@ public class MainMenu extends Activity {
         newGameBtn = findViewById(R.id.newGameBtn);
         helpBtn = findViewById(R.id.helpBtn);
 
+        /**
+         * When newGameBtn is clicked, the view changes to PlayScreen.
+         */
         newGameBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -26,6 +35,9 @@ public class MainMenu extends Activity {
             }
         });
 
+        /**
+         * When helpBtn is clicked, the view changes to HelpScreen.
+         */
         helpBtn.setOnClickListener(new View.OnClickListener(){
 
             @Override

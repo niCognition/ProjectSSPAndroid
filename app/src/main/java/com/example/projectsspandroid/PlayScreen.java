@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * This view contains two buttons, play versus the computer
+ * and just play.
+ */
+
 public class PlayScreen extends AppCompatActivity {
 
     Button cpuBtn,
@@ -20,6 +25,9 @@ public class PlayScreen extends AppCompatActivity {
         cpuBtn = findViewById(R.id.CpuBtn);
         playBtn = findViewById(R.id.PlayBtn);
 
+        /**
+         * When clicking the cpuBtn, we change the view to PlayCpu.
+         */
         cpuBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -28,6 +36,9 @@ public class PlayScreen extends AppCompatActivity {
             }
         });
 
+        /**
+         * When clicking the playBtn, we change the view to PlayRandom.
+         */
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

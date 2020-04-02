@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * This view allows the user to sign up for an account. This function is yet to
+ * be implemented in the app.
+ */
+
 public class SignUp extends Activity {
 
     Button backButton;

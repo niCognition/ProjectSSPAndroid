@@ -8,6 +8,10 @@ import android.widget.ImageButton;
 
 import java.util.Random;
 
+/**
+ * In this view, the user clicks on the RandomChoiceBtn,
+ * randomizing between rock, paper and scissors.
+ */
 public class PlayRandom extends Activity {
 
     Button randomBtn;
@@ -21,6 +25,11 @@ public class PlayRandom extends Activity {
 
         randomChoiceBtn = findViewById(R.id.randomChoiceBtn);
 
+        /**
+         * When randomBtn is clicked, the buttons visibility is set
+         * to "GONE".
+         * The method setRandomImage(); is also called.
+         */
         randomBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -31,6 +40,10 @@ public class PlayRandom extends Activity {
         });
     }
 
+    /**
+     * This method has a random number generator that generates a number
+     * between 1 and 3 and sets an image.
+     */
     public void setRandomImage() {
 
         Random rand = new Random();

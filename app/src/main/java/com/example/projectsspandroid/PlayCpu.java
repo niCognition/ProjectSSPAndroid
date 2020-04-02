@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+/**
+ * In this view the user plays against the computer.
+ */
 public class PlayCpu extends Activity {
 
     ImageView imageViewCpu,
@@ -39,7 +42,12 @@ public class PlayCpu extends Activity {
 
             displayWinner = findViewById(R.id.winnerText);
 
-
+            /**
+             * If the player chooses rock, the string playerChoice is set to "rock" and
+             * the imageView is also set to the relevant picture (rock).
+             * The method calculateWinner(); is called to determine who wins the game.
+             *
+             */
             rock.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -49,7 +57,12 @@ public class PlayCpu extends Activity {
                     calculateWinner();
                 }
             });
-
+            /**
+             * If the player chooses paper, the string playerChoice is set to "paper" and
+             * the imageView is also set to the relevant picture (rock).
+             * The method calculateWinner(); is called to determine who wins the game.
+             *
+             */
             paper.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -59,7 +72,12 @@ public class PlayCpu extends Activity {
                     calculateWinner();
                 }
             });
-
+            /**
+             * If the player chooses scissors, the string playerChoice is set to "scissors" and
+             * the imageView is also set to the relevant picture (rock).
+             * The method calculateWinner(); is called to determine who wins the game.
+             *
+             */
             scissor.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -75,6 +93,13 @@ public class PlayCpu extends Activity {
 
     }
 
+    /**
+     * This method is used to calculate the winner when playing against the computer.
+     * A random number generator is used to calculate the CPU's move. When the
+     * number has been generated, the relevant image is set and we compare
+     * the choice that the user has made against the computer and set the label.
+     *
+     */
     public void calculateWinner() {
 
         Random rand = new Random();
